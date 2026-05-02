@@ -26,6 +26,8 @@ public class BasketController(StoreContext context) : BaseApiController
     {
         var basket = await RetrieveBasket();
 
+        
+
         basket ??= CreateBasket();
 
         var product = await context.Products.FindAsync(productId);
